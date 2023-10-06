@@ -1,5 +1,5 @@
 import React from 'react';
-import Navbar from '../../../shared/navbar/Navbar';
+import Navbar from '../../shared/navbar/Navbar';
 import { Link } from 'react-router-dom';
 
 const Login = () => {
@@ -12,7 +12,7 @@ const Login = () => {
     return (
         <div className='container mx-auto'>
             <Navbar></Navbar>
-            <div className="card flex-shrink-0 w-full md:max-w-[50%] mx-auto mt-10 shadow-2xl bg-base-100">
+            <div className="card flex-shrink-0 w-full md:max-w-[50%] mx-auto mt-10 shadow-2xl bg-base-100 py-5">
                 <form className="card-body" onSubmit={handleLogin}>
                     <div className="form-control">
                         <label className="label">
@@ -33,7 +33,7 @@ const Login = () => {
                         <button className="btn btn-primary">Login</button>
                     </div>
                 </form>
-                <p className='flex items-center gap-2'>Do not have an Account? <Link to="/register">Register</Link></p>
+                <p className='flex items-center gap-2 justify-center'>Do not have an Account? <Link className='text-red-500' to="/register">Register</Link></p>
             </div>
         </div>
     );
